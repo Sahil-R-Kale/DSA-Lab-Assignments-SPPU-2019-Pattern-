@@ -1,4 +1,4 @@
-# DSA-Lab-Assignements-SPPU-2019-Pattern
+# DSA-Lab-Assignments-SPPU-2019-Pattern
 
 A repository of all assignments implemented as part of the fulfilment for the course : **210256: Data Structures and Algorithms Laboratory **
 
