@@ -197,7 +197,7 @@ int main() {
 		cout<<"\nEnter source node: ";cin>>src;
 		cout<<"\nEnter destination node: ";cin>>dest;
 		cout<<"\nEnter weight of edge: ";cin>>w;
-		while(src>x || dest>x || w<0){
+		while(src<0 || src>=x || dest<0 || dest>=x || w<0){
 			cout<<"Invalid input! Try again!"<<endl;
 			cout<<"\nEnter source node: ";cin>>src;
 			cout<<"\nEnter destination node: ";cin>>dest;
