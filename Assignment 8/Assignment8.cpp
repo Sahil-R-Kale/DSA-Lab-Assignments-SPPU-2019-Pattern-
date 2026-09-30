@@ -101,7 +101,7 @@ int main() {
 		case 1:
 			cout<<"Enter source vertex(0-"<<x-1<<"): ";cin>>src;
 			cout<<"Enter destination vertex(0-"<<x-1<<"): ";cin>>dest;
-			if((src<x)&&(dest<x)){
+			if(src>=0 && src<x && dest>=0 && dest<x){
 				g.addDirectedEdge(src, dest);
 			}
 			else{
