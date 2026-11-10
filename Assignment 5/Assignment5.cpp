@@ -118,31 +118,26 @@ public:
 			}
 		}
 		else{
+			Node *previous=NULL;
 			Node *temp=data[index].link;
 			if(!temp){
 				cout<<"\nError! Record not found!"<<endl;
 				return;
 			}
-			while(temp->link!=NULL){
+			while(temp!=NULL){
 				if(temp->key==s1){
-					Node *ptr=temp->link;
-					temp->key=ptr->key;
-					temp->value=ptr->value;
-					temp->link=ptr->link;
-					delete ptr;
+					if(previous==NULL)
+						data[index].link=temp->link;
+					else
+						previous->link=temp->link;
+					delete temp;
 					cout<<"\nRecord deleted successfully!"<<endl;
 					return;
 				}
-				else{
-					temp=temp->link;
-				}
+				previous=temp;
+				temp=temp->link;
 			}
-			if(temp->key==s1){
-				temp->key=temp->value="";
-				delete temp;
-				cout<<"\nRecord deleted successfully!"<<endl;
-				return;
-			}
+			cout<<"\nError! Record not found!"<<endl;
 	}
 	}
 };
